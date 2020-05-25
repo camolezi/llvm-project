@@ -11,6 +11,7 @@
 #include "../ClangTidyModuleRegistry.h"
 #include "DefinitionsInHeadersCheck.h"
 #include "MisplacedConstCheck.h"
+#include "MySecondCheckCheck.h"
 #include "NewDeleteOverloadsCheck.h"
 #include "NonCopyableObjects.h"
 #include "NonPrivateMemberVariablesInClassesCheck.h"
@@ -33,6 +34,8 @@ public:
     CheckFactories.registerCheck<DefinitionsInHeadersCheck>(
         "misc-definitions-in-headers");
     CheckFactories.registerCheck<MisplacedConstCheck>("misc-misplaced-const");
+    CheckFactories.registerCheck<MySecondCheckCheck>(
+        "misc-my-second-check");
     CheckFactories.registerCheck<NewDeleteOverloadsCheck>(
         "misc-new-delete-overloads");
     CheckFactories.registerCheck<NonCopyableObjectsCheck>(
